@@ -17,10 +17,10 @@ app.get("/", (req, res) => {
 app.use(cors());
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use("/auth", authRoute);
-app.use("/puzzle", puzzleRoute);
-app.use("/leaderboard", leaderboardRoute);
-app.use("/dashboard", dashboardRoute);
+app.use("/api/auth", authRoute);
+app.use("/api/puzzle", puzzleRoute);
+app.use("/api/leaderboard", leaderboardRoute);
+app.use("/api/dashboard", dashboardRoute);
 
 app.listen(process.env.PORT, () => {
     console.log("Backend is connected");
